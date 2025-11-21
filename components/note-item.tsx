@@ -123,19 +123,6 @@ export function NoteItem({
           <h2 className="text-sm font-bold px-2 break-words line-clamp-1">
             {item.emoji} {item.title}
           </h2>
-          <p
-            className={`text-xs pl-2 break-words line-clamp-1 ${
-              (!isMobile && isSearching && isHighlighted) ||
-              (!isSearching && item.slug === selectedNoteSlug)
-                ? "text-muted-foreground dark:text-white/80"
-                : "text-muted-foreground"
-            }`}
-          >
-            <span className="text-black dark:text-white">
-              {getDisplayDateByCategory(item.category, item.id).toLocaleDateString("en-US")}
-            </span>{" "}
-            {previewContent(item.content)}
-          </p>
         </Link>
       </div>
     </li>
